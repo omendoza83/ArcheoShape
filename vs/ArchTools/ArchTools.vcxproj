@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\NCT\nct\clustering\KMeans.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\clustering\SpectralClustering.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\color\Color.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\color\ColorPalette.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\AffineTransformation3D.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Line.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Line3D.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\mesh.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Plane.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\PlyMesh.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\rasterization.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\RasterizedObject3D.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Rectangle.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\StlMesh.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Triangle3D.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\interpolation\CubicSpline.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\math\math.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\math\math_functions.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\math\matrix_inverse.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\nct_exception.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\nct_utils.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\random\MersenneTwister.cpp" />
+    <ClCompile Include="..\..\..\NCT\nct\signal\spherical_harmonics.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\BaseDialog.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\Graphics3DWidget.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\Object3D.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\TriangularMesh.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\VoxelizedObject.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\ArrayPlot.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\PlotScene.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\PlotWidget.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\StemPlot.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\XYColorPlot.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\XYPlot.cpp" />
+    <ClCompile Include="..\..\..\QTTools\qt_tools\QtConfig.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\NCT\nct\Array.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Array2D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Array2D_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Array3D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Array3D_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Array4D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Array4D_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\array_iterator.h" />
+    <ClInclude Include="..\..\..\NCT\nct\array_iterator_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Array_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\clustering\KMeans.h" />
+    <ClInclude Include="..\..\..\NCT\nct\clustering\SpectralClustering.h" />
+    <ClInclude Include="..\..\..\NCT\nct\color\Color.h" />
+    <ClInclude Include="..\..\..\NCT\nct\color\ColorPalette.h" />
+    <ClInclude Include="..\..\..\NCT\nct\color\Color_inline.h" />
+    <ClInclude Include="..\..\..\NCT\nct\color\RgbColor.h" />
+    <ClInclude Include="..\..\..\NCT\nct\color\RgbColor_inline.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\AffineTransformation3D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\AffineTransformation3D_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Line.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Line3D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\mesh.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Plane.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\PlyMesh.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\rasterization.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\RasterizedObject3D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Rectangle.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\StlMesh.h" />
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Triangle3D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\interpolation\CubicSpline.h" />
+    <ClInclude Include="..\..\..\NCT\nct\math\linear_algebra.h" />
+    <ClInclude Include="..\..\..\NCT\nct\math\math.h" />
+    <ClInclude Include="..\..\..\NCT\nct\math\math_functions.h" />
+    <ClInclude Include="..\..\..\NCT\nct\nct.h" />
+    <ClInclude Include="..\..\..\NCT\nct\nct_constants.h" />
+    <ClInclude Include="..\..\..\NCT\nct\nct_exception.h" />
+    <ClInclude Include="..\..\..\NCT\nct\nct_exception_strings.h" />
+    <ClInclude Include="..\..\..\NCT\nct\nct_utils.h" />
+    <ClInclude Include="..\..\..\NCT\nct\nct_utils_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\random\MersenneTwister.h" />
+    <ClInclude Include="..\..\..\NCT\nct\random\RandomNumber.h" />
+    <ClInclude Include="..\..\..\NCT\nct\random\RandomNumber_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\signal\spherical_harmonics.h" />
+    <ClInclude Include="..\..\..\NCT\nct\SparseArray3D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\SparseArray3D_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\statistics\distance_metrics.h" />
+    <ClInclude Include="..\..\..\NCT\nct\statistics\distance_metrics_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\statistics\statistics.h" />
+    <ClInclude Include="..\..\..\NCT\nct\statistics\statistics_template.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Vector3D.h" />
+    <ClInclude Include="..\..\..\NCT\nct\Vector3D_template.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\graphics_3d\Graphics3DWidget.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\BaseDialog.h" />
+    <ClInclude Include="..\..\..\QTTools\qt_tools\graphics_3d\Object3D.h" />
+    <ClInclude Include="..\..\..\QTTools\qt_tools\graphics_3d\TriangularMesh.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\PlotScene.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\XYColorPlot.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\XYPlot.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\ArrayPlot.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\PlotWidget.h" />
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\StemPlot.h" />
+    <ClInclude Include="..\..\..\QTTools\qt_tools\graphics_3d\VoxelizedObject.h" />
+    <ClInclude Include="..\..\..\QTTools\qt_tools\QtConfig.h" />
+    <ClInclude Include="..\..\..\QTTools\qt_tools\qt_tools.h" />
+    <ClInclude Include="..\..\..\QTTools\qt_tools\qt_tools_exception_strings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\..\..\QTTools\qt_tools\plots\PlotWidget.ui" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4D1D0BB-6A11-46EC-AF9A-7DCC0CD90534}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>Qt6</QtInstall>
+    <QtModules>core;opengl;gui;multimedia;widgets;openglwidgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>Qt6</QtInstall>
+    <QtModules>core;opengl;gui;multimedia;widgets;openglwidgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>.\..\..\..\NIT;.\..\..\..\NCT;.\..\..\..\QTTOOLS;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4127;4251;4275;4503;4714;5054</DisableSpecificWarnings>
+      <AdditionalOptions>/bigobj /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies);$(Qt_LIBS_)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>.\..\..\..\NIT;.\..\..\..\NCT;.\..\..\..\QTTOOLS;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4127;4251;4275;4503;4714;5054</DisableSpecificWarnings>
+      <AdditionalOptions>/bigobj /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies);$(Qt_LIBS_)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

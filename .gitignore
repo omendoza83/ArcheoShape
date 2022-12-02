@@ -1,32 +1,40 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# Compilation files
 *.obj
+*.log
+*.tlog
+*.idb
+*.pdb
+*.ilk
+*.db
+*.intermediate
+*.resfiles
+*.lastbuildstate
+*.recipe
+*.pro.user
+priconfig.xml
+qualifiers.txt
+MultipleQualifiersPerDimensionFound.txt
 
-# Precompiled Headers
-*.gch
-*.pch
+# Visual studio files
+vs/.vs/
+vs/Win32/
+vs/x64/
+*.vcxproj.FileListAbsolute.txt
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# QT files
+moc_*
+qrc_*
+ui_*
+qt.natvis
+**/qmake
 
-# Fortran module files
-*.mod
-*.smod
+# QT creator files
+qtCreator/bin/
+qtCreator/build-*
+*.pro.user.*
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# MacOs files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*

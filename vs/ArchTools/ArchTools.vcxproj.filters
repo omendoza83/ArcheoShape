@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\NCT\nct\nct_exception.cpp">
+      <Filter>nct\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\nct_utils.cpp">
+      <Filter>nct\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\mesh.cpp">
+      <Filter>nct\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\StlMesh.cpp">
+      <Filter>nct\StlMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\RasterizedObject3D.cpp">
+      <Filter>nct\RasterizedObject3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\Graphics3DWidget.cpp">
+      <Filter>qt_tools\Graphics3DWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\TriangularMesh.cpp">
+      <Filter>qt_tools\TriangularMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Line3D.cpp">
+      <Filter>nct\Line3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\AffineTransformation3D.cpp">
+      <Filter>nct\AffineTransformation3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Triangle3D.cpp">
+      <Filter>nct\Triangle3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\interpolation\CubicSpline.cpp">
+      <Filter>nct\CubicSpline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\math\math.cpp">
+      <Filter>nct\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Plane.cpp">
+      <Filter>nct\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\Object3D.cpp">
+      <Filter>nct\Object3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\random\MersenneTwister.cpp">
+      <Filter>nct\MersenneTwister</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\signal\spherical_harmonics.cpp">
+      <Filter>nct\spherical_harmonics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\math\math_functions.cpp">
+      <Filter>nct\math_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\rasterization.cpp">
+      <Filter>nct\rasterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Line.cpp">
+      <Filter>nct\Line</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\Rectangle.cpp">
+      <Filter>nct\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\clustering\SpectralClustering.cpp">
+      <Filter>nct\SpectralClustering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\clustering\KMeans.cpp">
+      <Filter>nct\KMeans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\PlotScene.cpp">
+      <Filter>qt_tools\PlotScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\XYColorPlot.cpp">
+      <Filter>qt_tools\XYColorPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\XYPlot.cpp">
+      <Filter>qt_tools\XYPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\ArrayPlot.cpp">
+      <Filter>qt_tools\ArrayPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\PlotWidget.cpp">
+      <Filter>qt_tools\PlotWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\plots\StemPlot.cpp">
+      <Filter>qt_tools\StemPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\graphics_3d\VoxelizedObject.cpp">
+      <Filter>qt_tools\VoxelizedObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\QtConfig.cpp">
+      <Filter>qt_tools\QtConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\geometry\PlyMesh.cpp">
+      <Filter>nct\PlyMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\color\ColorPalette.cpp">
+      <Filter>nct\ColorPalette</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\color\Color.cpp">
+      <Filter>nct\Color</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\QTTools\qt_tools\BaseDialog.cpp">
+      <Filter>qt_tools\BaseDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NCT\nct\math\matrix_inverse.cpp">
+      <Filter>nct\linear_algebra</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\QTTools\qt_tools\qt_tools_exception_strings.h">
+      <Filter>qt_tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\QTTools\qt_tools\qt_tools.h">
+      <Filter>qt_tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\nct_exception.h">
+      <Filter>nct\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\nct_utils.h">
+      <Filter>nct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\nct_utils_template.h">
+      <Filter>nct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array.h">
+      <Filter>nct\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array_template.h">
+      <Filter>nct\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array2D.h">
+      <Filter>nct\Array2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array2D_template.h">
+      <Filter>nct\Array2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array3D.h">
+      <Filter>nct\Array3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array3D_template.h">
+      <Filter>nct\Array3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array4D.h">
+      <Filter>nct\Array4D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Array4D_template.h">
+      <Filter>nct\Array4D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\SparseArray3D.h">
+      <Filter>nct\SparseArray3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\SparseArray3D_template.h">
+      <Filter>nct\SparseArray3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\array_iterator.h">
+      <Filter>nct\array_iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\array_iterator_template.h">
+      <Filter>nct\array_iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Vector3D.h">
+      <Filter>nct\Vector3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\Vector3D_template.h">
+      <Filter>nct\Vector3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\color\RgbColor.h">
+      <Filter>nct\RgbColor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\color\RgbColor_inline.h">
+      <Filter>nct\RgbColor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\nct.h">
+      <Filter>nct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\nct_constants.h">
+      <Filter>nct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\nct_exception_strings.h">
+      <Filter>nct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\mesh.h">
+      <Filter>nct\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\StlMesh.h">
+      <Filter>nct\StlMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\RasterizedObject3D.h">
+      <Filter>nct\RasterizedObject3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\QTTools\qt_tools\graphics_3d\TriangularMesh.h">
+      <Filter>qt_tools\TriangularMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Line3D.h">
+      <Filter>nct\Line3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\AffineTransformation3D.h">
+      <Filter>nct\AffineTransformation3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\AffineTransformation3D_template.h">
+      <Filter>nct\AffineTransformation3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Triangle3D.h">
+      <Filter>nct\Triangle3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\interpolation\CubicSpline.h">
+      <Filter>nct\CubicSpline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\math\math.h">
+      <Filter>nct\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Plane.h">
+      <Filter>nct\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\QTTools\qt_tools\graphics_3d\Object3D.h">
+      <Filter>nct\Object3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\random\RandomNumber_template.h">
+      <Filter>nct\RandomNumber</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\random\RandomNumber.h">
+      <Filter>nct\RandomNumber</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\random\MersenneTwister.h">
+      <Filter>nct\MersenneTwister</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\signal\spherical_harmonics.h">
+      <Filter>nct\spherical_harmonics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\math\math_functions.h">
+      <Filter>nct\math_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\rasterization.h">
+      <Filter>nct\rasterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Line.h">
+      <Filter>nct\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\Rectangle.h">
+      <Filter>nct\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\statistics\distance_metrics.h">
+      <Filter>nct\distance_metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\statistics\distance_metrics_template.h">
+      <Filter>nct\distance_metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\statistics\statistics.h">
+      <Filter>nct\statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\statistics\statistics_template.h">
+      <Filter>nct\statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\clustering\SpectralClustering.h">
+      <Filter>nct\SpectralClustering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\clustering\KMeans.h">
+      <Filter>nct\KMeans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\QTTools\qt_tools\graphics_3d\VoxelizedObject.h">
+      <Filter>qt_tools\VoxelizedObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\QTTools\qt_tools\QtConfig.h">
+      <Filter>qt_tools\QtConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\geometry\PlyMesh.h">
+      <Filter>nct\PlyMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\color\ColorPalette.h">
+      <Filter>nct\ColorPalette</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\color\Color.h">
+      <Filter>nct\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\color\Color_inline.h">
+      <Filter>nct\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NCT\nct\math\linear_algebra.h">
+      <Filter>nct\linear_algebra</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="qt_tools">
+      <UniqueIdentifier>{7fd7ecef-a7be-45eb-b6ac-fbed716543bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct">
+      <UniqueIdentifier>{4e7c8d8f-d890-4d94-941c-67b3d2a08b47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\RgbColor">
+      <UniqueIdentifier>{8e759787-d13d-456e-b0ac-0ec1c0833c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Array">
+      <UniqueIdentifier>{627d8d21-3af9-45a1-992f-20752e56e45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\array_iterator">
+      <UniqueIdentifier>{c12119a0-0226-422b-b5ad-b2871cec983d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Array2D">
+      <UniqueIdentifier>{71c28ad1-2325-4660-98a9-28ade161e937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Array3D">
+      <UniqueIdentifier>{394c1bd0-92bb-4f2c-910a-b65c66aa6824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Array4D">
+      <UniqueIdentifier>{c3708977-73db-4307-a723-f29175b80507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\exception">
+      <UniqueIdentifier>{3426ec2b-2f12-4238-9216-b6cacdbc093a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\SparseArray3D">
+      <UniqueIdentifier>{86276e41-58ee-43ed-b1ef-55bdf36fee3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\utils">
+      <UniqueIdentifier>{b7dfafbd-6c51-48f4-997b-39bbac0f6335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Vector3D">
+      <UniqueIdentifier>{50f1efde-c17d-4985-a992-3db989fea4c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\mesh">
+      <UniqueIdentifier>{615f94fd-f091-4c81-b257-23f1f6aac8d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\StlMesh">
+      <UniqueIdentifier>{25c19ade-4426-4cba-b56c-ce163d54801c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\RasterizedObject3D">
+      <UniqueIdentifier>{29b66374-5018-4c0c-ab7c-6bd75adbb58d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\Graphics3DWidget">
+      <UniqueIdentifier>{43708204-1b34-44f0-a3d6-3a5a192e4a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\TriangularMesh">
+      <UniqueIdentifier>{7d5ce875-4854-4dee-a7b1-e8314b8904f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Line3D">
+      <UniqueIdentifier>{a3bdcc03-59df-49ac-9430-50640510bc70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\AffineTransformation3D">
+      <UniqueIdentifier>{b6c8c82e-91fb-4167-9366-870ae686bbf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Triangle3D">
+      <UniqueIdentifier>{99c2fdac-47f2-42e4-a302-18509dc0dc93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\CubicSpline">
+      <UniqueIdentifier>{fd7e3d32-c670-45e4-bb7a-4ac5b051ea8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\linear_algebra">
+      <UniqueIdentifier>{b5242f34-2d9e-4977-8115-069ddb8540fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\math">
+      <UniqueIdentifier>{f0be3119-a7e4-4a7f-acbd-10c1ba05f574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Plane">
+      <UniqueIdentifier>{a2f5aa02-a8fb-4a6c-80ba-a2533ec1f9ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Object3D">
+      <UniqueIdentifier>{36a633f0-8869-417d-b2bc-b9ee5908909e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\RandomNumber">
+      <UniqueIdentifier>{dc32d63e-7fd0-40f3-92ae-b44ff960a176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\MersenneTwister">
+      <UniqueIdentifier>{a6922968-7a0b-4fca-8f06-bc3d0f238fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\spherical_harmonics">
+      <UniqueIdentifier>{f5f6b70f-f7c1-4587-8c7e-cf7711f13d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\math_functions">
+      <UniqueIdentifier>{0a5dd22f-3320-45d9-a343-13213cb4bc94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\rasterization">
+      <UniqueIdentifier>{ab769657-8d77-4c3d-8e5f-e84593ea6122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Line">
+      <UniqueIdentifier>{bfe26ff5-be4a-4545-a530-205e9922a98b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Rectangle">
+      <UniqueIdentifier>{b9f95d30-d840-4d8d-ba78-585d18e8a2ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\distance_metrics">
+      <UniqueIdentifier>{ab554a9c-6a6b-4924-bd42-869fdbd532eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\statistics">
+      <UniqueIdentifier>{2ed5176f-0586-4d1f-b30a-4849b6af8ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\SpectralClustering">
+      <UniqueIdentifier>{18f3d8dd-049b-42ec-8940-9f02000b4c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\KMeans">
+      <UniqueIdentifier>{12d061f5-b2a0-42e4-8763-bf93d12524d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\PlotScene">
+      <UniqueIdentifier>{b37e300b-edb0-4d30-988c-89081d0dc2c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\XYColorPlot">
+      <UniqueIdentifier>{a3028c72-31e5-4fc2-a5e9-631143232a6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\XYPlot">
+      <UniqueIdentifier>{7a78562c-2392-4d07-8548-4ec91f034650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\ArrayPlot">
+      <UniqueIdentifier>{8cb0dfa9-a7b8-4e40-82fb-969db4326496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\PlotWidget">
+      <UniqueIdentifier>{42b5ad2c-4ee5-4426-9716-aa41a3b20832}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\StemPlot">
+      <UniqueIdentifier>{225bc1d0-1af3-42d2-814a-3989c9297cfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\VoxelizedObject">
+      <UniqueIdentifier>{fdd8ef01-4ae6-41ba-9cd8-78d5e705e96f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\QtConfig">
+      <UniqueIdentifier>{b8e7e181-3480-4344-baec-685c81df970b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\PlyMesh">
+      <UniqueIdentifier>{4d37aac4-437b-461b-9ef2-696345492d6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\ColorPalette">
+      <UniqueIdentifier>{245f4763-f5d5-415b-a4aa-5d91b7cfc509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nct\Color">
+      <UniqueIdentifier>{6ef51b73-563e-4fb7-9945-8074731e95fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_tools\BaseDialog">
+      <UniqueIdentifier>{e523d7a4-a57c-4984-b7b3-549d314dc7d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\graphics_3d\Graphics3DWidget.h">
+      <Filter>qt_tools\Graphics3DWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\PlotScene.h">
+      <Filter>qt_tools\PlotScene</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\XYColorPlot.h">
+      <Filter>qt_tools\XYColorPlot</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\XYPlot.h">
+      <Filter>qt_tools\XYPlot</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\ArrayPlot.h">
+      <Filter>qt_tools\ArrayPlot</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\PlotWidget.h">
+      <Filter>qt_tools\PlotWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\plots\StemPlot.h">
+      <Filter>qt_tools\StemPlot</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\QTTools\qt_tools\BaseDialog.h">
+      <Filter>qt_tools\BaseDialog</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\..\..\QTTools\qt_tools\plots\PlotWidget.ui">
+      <Filter>qt_tools\PlotWidget</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

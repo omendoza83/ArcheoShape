@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="connect">icons/connect.png</file>
+		<file alias="error">icons/error.png</file>
+		<file alias="exit">icons/exit.png</file>
+		<file alias="harmonic">icons/harmonic.png</file>
+		<file alias="lines">icons/lines.png</file>
+		<file alias="load">icons/load.png</file>
+		<file alias="loading">icons/loading.gif</file>			
+		<file alias="meshAnalyzer">icons/meshAnalyzer.png</file>
+		<file alias="meshAnalyzerIco">icons/meshAnalyzer.ico</file>
+		<file alias="meshAnalyzerMini">icons/meshAnalyzerMini.png</file>		
+		<file alias="meshClustering">icons/meshClustering.png</file>
+		<file alias="meshClusteringIco">icons/meshClustering.ico</file>
+		<file alias="meshClusteringMini">icons/meshClusteringMini.png</file>
+		<file alias="next">icons/next.png</file>
+		<file alias="objectClustering">icons/objectClustering.png</file>
+		<file alias="objectClusteringIco">icons/objectClustering.ico</file>
+		<file alias="objectClusteringMini">icons/objectClusteringMini.png</file>
+		<file alias="ok">icons/ok.png</file>
+		<file alias="points">icons/points.png</file>
+		<file alias="previous">icons/previous.png</file>
+		<file alias="process">icons/process.png</file>
+		<file alias="processing">icons/processing.gif</file>
+		<file alias="properties">icons/properties.png</file>
+		<file alias="results">icons/results.png</file>
+		<file alias="shapeDistribution">icons/shapeDistribution.png</file>
+		<file alias="solid">icons/solid.png</file>
+		<file alias="symDescriptor">icons/symDescriptor.png</file>
+		<file alias="tools">icons/tools.png</file>
+		<file alias="update">icons/update.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <QtRcc Include="..\..\resources\icons.qrc" />
+    <QtRcc Include="..\..\resources\mesh_features.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AboutWindow">
+      <UniqueIdentifier>{01c5b4ef-4a00-4f58-9449-6e74cd865b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainWindow">
+      <UniqueIdentifier>{cb51da2c-4c00-4703-b8a2-02e4ee98904d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ResultsDialog">
+      <UniqueIdentifier>{39fd3978-bc60-41d8-90dc-80bed9dd5bef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RSDDialog">
+      <UniqueIdentifier>{8010849d-ecfc-459e-80d7-1e0bbc5f65c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDDialog">
+      <UniqueIdentifier>{af9074cc-02ca-44aa-becd-faabd27e38a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HMDialog">
+      <UniqueIdentifier>{ddc653fc-9b42-490e-b5f4-388ca1df21d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\..\scr\MeshAnalyzer\AboutWindow.h">
+      <Filter>AboutWindow</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\scr\MeshAnalyzer\MainWindow.h">
+      <Filter>MainWindow</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\scr\MeshAnalyzer\HMDialog.h">
+      <Filter>HMDialog</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\scr\MeshAnalyzer\SDDialog.h">
+      <Filter>SDDialog</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\scr\MeshAnalyzer\RSDDialog.h">
+      <Filter>RSDDialog</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\scr\MeshAnalyzer\ResultsDialog.h">
+      <Filter>ResultsDialog</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\..\scr\MeshAnalyzer\AboutWindow.ui">
+      <Filter>AboutWindow</Filter>
+    </QtUic>
+    <QtUic Include="..\..\scr\MeshAnalyzer\MainWindow.ui">
+      <Filter>MainWindow</Filter>
+    </QtUic>
+    <QtUic Include="..\..\scr\MeshAnalyzer\ResultsDialog.ui">
+      <Filter>ResultsDialog</Filter>
+    </QtUic>
+    <QtUic Include="..\..\scr\MeshAnalyzer\RSDDialog.ui">
+      <Filter>RSDDialog</Filter>
+    </QtUic>
+    <QtUic Include="..\..\scr\MeshAnalyzer\SDDialog.ui">
+      <Filter>SDDialog</Filter>
+    </QtUic>
+    <QtUic Include="..\..\scr\MeshAnalyzer\HMDialog.ui">
+      <Filter>HMDialog</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\scr\MeshAnalyzer\main.cpp" />
+    <ClCompile Include="..\..\scr\MeshAnalyzer\MainWindow.cpp">
+      <Filter>MainWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\scr\MeshAnalyzer\HMDialog.cpp">
+      <Filter>HMDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\scr\MeshAnalyzer\RSDDialog.cpp">
+      <Filter>RSDDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\scr\MeshAnalyzer\SDDialog.cpp">
+      <Filter>SDDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\scr\MeshAnalyzer\ResultsDialog.cpp">
+      <Filter>ResultsDialog</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

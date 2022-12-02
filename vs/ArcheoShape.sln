@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeshAnalyzer", "MeshAnalyzer\MeshAnalyzer.vcxproj", "{1BFE7CC8-24E7-4DD3-A35B-CBCD9298ECD9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArchTools", "ArchTools\ArchTools.vcxproj", "{A4D1D0BB-6A11-46EC-AF9A-7DCC0CD90534}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BFE7CC8-24E7-4DD3-A35B-CBCD9298ECD9}.Debug|x64.ActiveCfg = Debug|x64
+		{1BFE7CC8-24E7-4DD3-A35B-CBCD9298ECD9}.Debug|x64.Build.0 = Debug|x64
+		{1BFE7CC8-24E7-4DD3-A35B-CBCD9298ECD9}.Release|x64.ActiveCfg = Release|x64
+		{1BFE7CC8-24E7-4DD3-A35B-CBCD9298ECD9}.Release|x64.Build.0 = Release|x64
+		{A4D1D0BB-6A11-46EC-AF9A-7DCC0CD90534}.Debug|x64.ActiveCfg = Debug|x64
+		{A4D1D0BB-6A11-46EC-AF9A-7DCC0CD90534}.Debug|x64.Build.0 = Debug|x64
+		{A4D1D0BB-6A11-46EC-AF9A-7DCC0CD90534}.Release|x64.ActiveCfg = Release|x64
+		{A4D1D0BB-6A11-46EC-AF9A-7DCC0CD90534}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54C46EAD-6876-4BAB-A61C-445D320EEEC6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Mesh analizer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../resources/icons.qrc">
+    <normaloff>:/icons/meshAnalyzerIco</normaloff>:/icons/meshAnalyzerIco</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="qt_tools::graphics_3d::Graphics3DWidget" name="modelWidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="mainMenu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="loadAction"/>
+    <addaction name="loadConfigFileAction"/>
+    <addaction name="separator"/>
+    <addaction name="exitAction"/>
+   </widget>
+   <widget class="QMenu" name="helpMenu">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="aboutAction"/>
+   </widget>
+   <widget class="QMenu" name="toolsMenu">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="toolsAction"/>
+    <addaction name="propertiesAction"/>
+    <addaction name="separator"/>
+    <addaction name="shapeDistributionsAction"/>
+    <addaction name="symmetryDescriptorAction"/>
+    <addaction name="harmonicDescriptorAction"/>
+    <addaction name="separator"/>
+    <addaction name="openResultsDialogAction"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="toolsMenu"/>
+   <addaction name="helpMenu"/>
+  </widget>
+  <widget class="QDockWidget" name="propertiesWidget">
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Model properties</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="propertiesContent">
+    <layout class="QGridLayout" name="gridLayout_7">
+     <item row="4" column="0">
+      <spacer name="propertiesVerticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="infoGroupBox">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="title">
+        <string>Model info</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="vertexLabel">
+          <property name="text">
+           <string>Number of vertices:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="vertexValueLabel">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="polygonLabel">
+          <property name="text">
+           <string>Number of polygons:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="polygonValueLabel">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="displayModeGroupBox">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>130</height>
+        </size>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="title">
+        <string>3D model</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0" colspan="2">
+         <widget class="QRadioButton" name="meshRadioButton">
+          <property name="text">
+           <string>Model mesh</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QRadioButton" name="voxelizedRadioButton">
+          <property name="text">
+           <string>Rasterized model</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="voxelsLabel">
+          <property name="text">
+           <string>Number of divisions:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="voxelsSpinBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>8</number>
+          </property>
+          <property name="maximum">
+           <number>128</number>
+          </property>
+          <property name="singleStep">
+           <number>2</number>
+          </property>
+          <property name="value">
+           <number>64</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <spacer name="propertiesHorizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="0">
+      <widget class="QGroupBox" name="displayPropertiesGroupBox">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>170</height>
+        </size>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="title">
+        <string>Scene properties</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="3" column="0">
+         <widget class="QLabel" name="colorLabel">
+          <property name="text">
+           <string>Color:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QToolButton" name="colorToolButton">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QCheckBox" name="fillCheckbox">
+          <property name="text">
+           <string>Fill polygons</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QCheckBox" name="linesCheckbox">
+          <property name="text">
+           <string>Draw lines</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QCheckBox" name="pointsCheckbox">
+          <property name="text">
+           <string>Draw vertices</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="shinenessLabel">
+          <property name="text">
+           <string>Shinness:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QSpinBox" name="shininessSpinBox">
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="singleStep">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="resetButton">
+       <property name="statusTip">
+        <string>Restablece la escena a sus valores predeterminados</string>
+       </property>
+       <property name="text">
+        <string>Reset scene</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="toolsWidget">
+   <property name="maximumSize">
+    <size>
+     <width>270</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Tools</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="toolsContent">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="2" column="0">
+      <widget class="QFrame" name="shapeDistributionsFrame">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <property name="margin" stdset="0">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="shapeDistributionsButton">
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="statusTip">
+           <string>Open shape distributions window</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/icons.qrc">
+            <normaloff>:/icons/shapeDistribution</normaloff>:/icons/shapeDistribution</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>96</width>
+            <height>96</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QFrame" name="symmetryDescriptorFrame">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="margin" stdset="0">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="symmetryDescriptorButton">
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="statusTip">
+           <string>Open reflective symmetry descriptor window</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/icons.qrc">
+            <normaloff>:/icons/symDescriptor</normaloff>:/icons/symDescriptor</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>96</width>
+            <height>96</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QFrame" name="propertiesFrame">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="margin" stdset="0">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="propertiesButton">
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="statusTip">
+           <string>Open model properties window</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/icons.qrc">
+            <normaloff>:/icons/properties</normaloff>:/icons/properties</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>96</width>
+            <height>96</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="harmonicDescriptorLabel">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Harmonic decomposition</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="propertiesLabel">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Model properties</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="shapeDistributionsLabel">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Shape distributions</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="symmetryDescriptorLabel">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Reflective symmetry descriptor</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QFrame" name="harmonicDescriptorFrame">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <property name="margin" stdset="0">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="harmonicDescriptorButton">
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="statusTip">
+           <string>Open harmonic decomposition window</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/icons.qrc">
+            <normaloff>:/icons/harmonic</normaloff>:/icons/harmonic</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>96</width>
+            <height>96</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <spacer name="toolsSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="exitAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/exit</normaloff>:/img/exit</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/MeshAnalizer</normaloff>:/img/MeshAnalizer</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="loadAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/properties</normaloff>:/img/properties</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open model</string>
+   </property>
+  </action>
+  <action name="propertiesAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/properties</normaloff>:/img/properties</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Model properties</string>
+   </property>
+  </action>
+  <action name="shapeDistributionsAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/shapeDistribution</normaloff>:/img/shapeDistribution</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Shape distributions</string>
+   </property>
+  </action>
+  <action name="symmetryDescriptorAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/symDescriptor</normaloff>:/img/symDescriptor</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Reflective symmetry descriptor</string>
+   </property>
+  </action>
+  <action name="harmonicDescriptorAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/harmonic</normaloff>:/img/harmonic</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Harmonic decimposition</string>
+   </property>
+  </action>
+  <action name="toolsAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/tools</normaloff>:/img/tools</iconset>
+   </property>
+   <property name="text">
+    <string>Tools &amp;window</string>
+   </property>
+  </action>
+  <action name="loadConfigFileAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/load</normaloff>:/img/load</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open configuration file</string>
+   </property>
+   <property name="toolTip">
+    <string>Abrir archivo dec onfiguración de colección</string>
+   </property>
+  </action>
+  <action name="openResultsDialogAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/results</normaloff>:/img/results</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Results window</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>qt_tools::graphics_3d::Graphics3DWidget</class>
+   <extends>QWidget</extends>
+   <header>qt_tools/graphics_3d/Graphics3DWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>propertiesButton</tabstop>
+  <tabstop>shapeDistributionsButton</tabstop>
+  <tabstop>symmetryDescriptorButton</tabstop>
+  <tabstop>harmonicDescriptorButton</tabstop>
+  <tabstop>meshRadioButton</tabstop>
+  <tabstop>voxelizedRadioButton</tabstop>
+  <tabstop>voxelsSpinBox</tabstop>
+  <tabstop>fillCheckbox</tabstop>
+  <tabstop>linesCheckbox</tabstop>
+  <tabstop>pointsCheckbox</tabstop>
+  <tabstop>colorToolButton</tabstop>
+  <tabstop>shininessSpinBox</tabstop>
+  <tabstop>resetButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../resources/icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>exitAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolsAction</sender>
+   <signal>triggered()</signal>
+   <receiver>toolsWidget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>134</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>propertiesAction</sender>
+   <signal>triggered()</signal>
+   <receiver>propertiesWidget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>709</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>propertiesButton</sender>
+   <signal>clicked()</signal>
+   <receiver>propertiesWidget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>709</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>voxelizedRadioButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>voxelsSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>734</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>734</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>shapeDistributionsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>shapeDistributionsAction</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>harmonicDescriptorButton</sender>
+   <signal>clicked()</signal>
+   <receiver>harmonicDescriptorAction</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>symmetryDescriptorButton</sender>
+   <signal>clicked()</signal>
+   <receiver>symmetryDescriptorAction</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
