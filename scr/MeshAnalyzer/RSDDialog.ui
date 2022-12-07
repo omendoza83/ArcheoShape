@@ -142,7 +142,7 @@
          <item row="3" column="0" colspan="2">
           <widget class="QPushButton" name="compareButton">
            <property name="text">
-            <string>Comparte descriptor with collection</string>
+            <string>Compare descriptor with collection</string>
            </property>
           </widget>
          </item>

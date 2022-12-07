@@ -33,6 +33,9 @@
 
 #include <algorithm>
 
+#include "Eigen/Core"
+#include "Eigen/Eigenvalues"
+
 //=================================================================================================================
 //        GENERAL PURPOSE FUNCTIONS
 //=================================================================================================================
@@ -848,230 +851,33 @@ nct::ColumnVector nct::math::linear_algebra::solveSystemPLUBanded(const PLUBande
 }
 
 
-
 //-----------------------------------------------------------------------------------------------------------------
-/**
- *  @brief      Complete tridiagonal reduction.
- *  @details    This function reduces an array into its tridiagonal form.
- *              This function is suitable when the orthogonal matrix is required.
- *  @param[in,out] v  Input array. Here the modified matrix that is required to
- *              calculate the orthogonal matrix is returned.
- *  @returns    The arrays with the diagonal and subdiagonal of the
- *              tridiagonal form of the input matrix.
- */
-static std::pair<nct::ColumnVector, nct::ColumnVector> completeTrigReduction(nct::Matrix& v)
-{
-    nct::diff_t n = static_cast<nct::diff_t>(v.rows());
-    auto d = nct::ColumnVector::zeros(n);
-    auto e = nct::ColumnVector::zeros(n);
-
-    for (nct::diff_t i = n - 1; i > 0; i--) {
-        nct::diff_t l = i - 1;
-        double h = 0.0;
-        double scale = 0.0;
-
-        if (l > 0) {
-            for (nct::diff_t k = 0; k < i; k++)
-                scale += std::abs(v(i, k));
-
-            if (scale == 0.0) {
-                e[i] = v(i, l);
-            }
-            else {
-                for (nct::diff_t k = 0; k < i; k++) {
-                    v(i, k) /= scale;
-                    h += v(i, k) * v(i, k);
-                }
-
-                double f = v(i, l);
-                double g = (f >= 0.0 ? -std::sqrt(h) : std::sqrt(h));
-                e[i] = scale * g;
-                h -= f * g;
-                v(i, l) = f - g;
-                f = 0.0;
-
-                for (nct::diff_t j = 0; j < i; j++) {
-                    v(j, i) = v(i, j) / h;
-                    g = 0.0;
-
-                    for (nct::diff_t k = 0; k < j + 1; k++)
-                        g += v(j, k) * v(i, k);
-
-                    for (nct::diff_t k = j + 1; k < i; k++)
-                        g += v(k, j) * v(i, k);
-
-                    e[j] = g / h;
-                    f += e[j] * v(i, j);
-                }
-
-                double hh = f / (h + h);
-                for (nct::diff_t j = 0; j < i; j++) {
-                    f = v(i, j);
-                    e[j] = g = e[j] - hh * f;
-                    for (nct::diff_t k = 0; k < j + 1; k++)
-                        v(j, k) -= (f * e[k] + g * v(i, k));
-                }
-            }
-        }
-        else {
-            e[i] = v(i, l);
-        }
-        d[i] = h;
-    }
-
-    d[0] = 0.0;
-    e[0] = 0.0;
-    for (nct::diff_t i = 0; i < n; i++) {
-        if (d[i] != 0.0) {
-            for (nct::diff_t j = 0; j < i; j++) {
-                double g = 0.0;
-                for (nct::diff_t k = 0; k < i; k++)
-                    g += v(i, k) * v(k, j);
-
-                for (nct::diff_t k = 0; k < i; k++)
-                    v(k, j) -= g * v(k, i);
-            }
-        }
-
-        d[i] = v(i, i);
-        v(i, i) = 1.0;
-        for (nct::diff_t j = 0; j < i; j++)
-            v(j, i) = v(i, j) = 0.0;
-    }
-
-    return std::make_pair(d, e);
-}
-
-
-//-----------------------------------------------------------------------------------------------------------------
-/**
- *  @brief      QL algorithm for tridiagonal symmetric matrix.
- *  @details    QL algorithm for calculating the eigenvalues and eigenvectors of a
- *              tridiagonal symmetric matrix.
- *  @param[in,out] d  Diagonal of the symmetric matrix. Here the eigenvalues are
- *              returned.
- *  @param[in,out] e  Sub-diagonal of the symmetric matrix.
- *  @param[in,out] v  Modified matrix from the tridiagonal reduction. Here
- *               the orthogonal matrix is returned.
- */
-static void trigQL(nct::ColumnVector& d, nct::ColumnVector& e, nct::Matrix& v)
-{
-    const nct::size_t maxIt = 100;
-    nct::diff_t n = static_cast<nct::diff_t>(d.size());
-
-    for (nct::diff_t i = 1; i < n; i++)
-        e[i - 1] = e[i];
-    e[n - 1] = 0.0;
-
-    for (nct::diff_t l = 0; l < n; l++) {
-        nct::size_t iter = 0;
-        nct::diff_t m = 0;
-        double dd = 0.0;
-        do {
-            for (m = l; m < n - 1; m++) {
-                dd = std::abs(d[m]) + std::abs(d[m + 1]);
-                if (std::abs(e[m]) <= nct::EPS * dd)
-                    break;
-            }
-
-            if (m != l) {
-                if (iter++ == maxIt)
-                    throw nct::OperationException(nct::exc_error_computing_matrix_factorization,
-                        SOURCE_INFO);
-
-                double g = (d[l + 1] - d[l]) / (2.0 * e[l]);
-                double r = nct::math::pythag(g, 1.0);
-                g = d[m] - d[l] + e[l] / (g + nct::math::sign(r, g));
-                double s = 1.0;
-                double c = 1.0;
-                double p = 0.0;
-
-                nct::diff_t i = 0;
-                for (i = m - 1; i >= l; i--) {
-                    double f = s * e[i];
-                    double b = c * e[i];
-                    e[i + 1] = (r = nct::math::pythag(f, g));
-
-                    if (r == 0.0) {
-                        d[i + 1] -= p;
-                        e[m] = 0.0;
-                        break;
-                    }
-
-                    s = f / r;
-                    c = g / r;
-                    g = d[i + 1] - p;
-                    r = (d[i] - g) * s + 2.0 * c * b;
-                    d[i + 1] = g + (p = s * r);
-                    g = c * r - b;
-
-                    for (nct::diff_t k = 0; k < n; k++) {
-                        f = v(k, i + 1);
-                        v(k, i + 1) = s * v(k, i) + c * f;
-                        v(k, i) = c * v(k, i) - s * f;
-                    }
-
-                }
-
-                if (r == 0.0 && i >= l)
-                    continue;
-
-                d[l] -= p;
-                e[l] = g;
-                e[m] = 0.0;
-            }
-        } while (m != l);
-    }
-}
-
-//-----------------------------------------------------------------------------------------------------------------
-/**
- *  @brief      Sort eigenvalues.
- *  @details    This function sorts an array of eigenvalues and its array of eigenvectors.
- *  @param[in,out] d  Array of eigenvalues.
- *  @param[in,out] v  Array of eigenvectors.
- */
-static void eigensort(nct::ColumnVector& d, nct::Matrix& v)
-{
-    nct::diff_t n = static_cast<nct::diff_t>(d.size());
-    for (nct::diff_t i = 0; i < n - 1; i++) {
-        auto k = i;
-        double p = d[i];
-        for (nct::diff_t j = i; j < n; j++) {
-            if (d[j] >= p)
-                p = d[k = j];
-        }
-
-        if (k != i) {
-            d[k] = d[i];
-            d[i] = p;
-
-            for (nct::diff_t j = 0; j < n; j++) {
-                p = v(j, i);
-                v(j, i) = v(j, k);
-                v(j, k) = p;
-            }
-        }
-    }
-}
-
-
-//-----------------------------------------------------------------------------------------------------------------
-nct::math::linear_algebra::Eigen nct::math::linear_algebra::symmEigenvectors(const Matrix& a)
+nct::math::linear_algebra::Eigensol nct::math::linear_algebra::symmEigenvectors(const Matrix& a)
 {
     if ((a.rows() == 0) && (a.columns() == 0))
-        return Eigen();
+        return Eigensol();
 
     if (!isSymmetric(a))
         throw ArgumentException("a", exc_non_symmetric_matrix, SOURCE_INFO);
 
-    Eigen eig;
-    eig.v = a;
-    auto de = completeTrigReduction(eig.v);
+    Eigen::MatrixXd A = Eigen::MatrixXd::Zero(a.rows(), a.columns());    
 
-    eig.d = std::move(de.first);
-    trigQL(eig.d, de.second, eig.v);
-    eigensort(eig.d, eig.v);
+    for (size_t i = 0; i < a.rows(); i++)
+        for (size_t j = 0; j < a.rows(); j++)
+            A(i, j) = a(i, j);
+
+    Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> es(A);
+
+    Eigensol eig;
+
+    eig.d.resize(es.eigenvalues().rows());
+    for (size_t i = 0; i < static_cast<size_t>(es.eigenvalues().rows()); i++)
+        eig.d[i] = es.eigenvalues()(i);
+
+    eig.v.resize(es.eigenvectors().rows(), es.eigenvectors().cols());
+    for (size_t i = 0; i < static_cast<size_t>(es.eigenvectors().rows()); i++)
+        for (size_t j = 0; j < static_cast<size_t>(es.eigenvectors().rows()); j++)
+            eig.v(i, j) = es.eigenvectors()(i, j);
 
     return eig;
 }
