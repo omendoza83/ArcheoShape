@@ -3,7 +3,7 @@
 
 ArcheoShape is an open source project with software tools for modeling and analyzing archeological pieces. The current version has only one application written in C++ called <b>MeshAnalyzer</b>. Future versions will incorporate new tools developed in different languages.
 
-<b>MeshAnalyzer</b> is a program with user interface that is used to compare 3D meshes. The intention of this program is to identify possible 3D meshes stored in a data base that are similar to one mesh provided by the user. The current version has an internal data set of more than 150 pre-processed meshes that represent prehispanic masks and other ancient tools. Incoming versions will allow to build and manage custom data bases.
+<b>MeshAnalyzer</b> is a program with user interface developed for comparing 3D meshes. The purpose of this program is to identify possible 3D meshes stored in a data base that are similar to one mesh provided by the user. The current version has an internal data set of more than 150 pre-processed meshes that represent prehispanic masks and other ancient tools. Incoming versions will allow to build and manage custom data bases.
 
 To compile the project, you require the following libraries:
 
