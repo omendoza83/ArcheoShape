@@ -1,11 +1,9 @@
-ArcheoShape - Software tools for archeological pieces modeling
+MIT License
 
-Licensing information
-_____________________
+Copyright (c) 2022 Omar Mendoza Montoya (omendoz@live.com.mx)
 
-The source code and compilation files of the ArcheoShape project are available under the terms of the MIT license (see LICENSE_MIT file). The "scr" folder contains all the source code of this repository whereas the folder "vs" has the compilation files.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Mesh files and project resources (images, preprocesed data and configuration files) are protected by the terms of the Creative Commons Attribution-NonCommercial 4.0 International Public License (see LICENSE_CC_BY-NC_4.0 file). The mesh files are in the "models" folder and the rest of the resources are in the "resources" folder.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-This repository also contains a compiled version of the project code ("bin" path). The executable runs on Windows, and requires some QT libraries which are distributed with the executable under the terms of the GNU Lesser General Public License v.3. The executable contains the license file for QT modules. 
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
