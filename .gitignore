@@ -38,3 +38,7 @@ qtCreator/build-*
 .AppleDouble
 .LSOverride
 ._*
+
+# Other paths
+models/
+resources/
