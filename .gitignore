@@ -16,9 +16,9 @@ qualifiers.txt
 MultipleQualifiersPerDimensionFound.txt
 
 # Visual studio files
-vs/.vs/
-vs/Win32/
-vs/x64/
+**/.vs/
+**/Win32/
+**/x64/
 *.vcxproj.FileListAbsolute.txt
 
 # QT files
